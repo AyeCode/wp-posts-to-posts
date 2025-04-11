@@ -6,7 +6,9 @@
 abstract class P2P_Column {
 
 	protected $ctype;
+
 	protected $column_id;
+
 	protected $connected = array();
 
 	function __construct( $directed ) {
