@@ -60,6 +60,9 @@ Additional info can be found on the [wiki](http://github.com/scribu/wp-posts-to-
 
 == Changelog ==
 
+= 1.7.9 - 2026-03-TBD =
+* Fix conlficts with Divi 5 - FIXED
+
 = 1.7.8 - 2026-03-06 =
 * Re-release to resolve a deployment failure caused by GitHub service outage - FIXED
 
