@@ -48,6 +48,16 @@ function _p2p_load_admin() {
 	new P2P_Column_Factory;
 	new P2P_Dropdown_Factory;
 
+	// P2P_Tools_Page translates strings while it is being constructed, so it
+	// must not be instantiated before 'init' (see _load_textdomain_just_in_time).
+	if ( did_action( 'init' ) ) {
+		_p2p_load_tools_page();
+	} else {
+		add_action( 'init', '_p2p_load_tools_page' );
+	}
+}
+
+function _p2p_load_tools_page() {
 	new P2P_Tools_Page;
 }
 

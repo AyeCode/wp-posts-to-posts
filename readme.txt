@@ -62,6 +62,8 @@ Additional info can be found on the [wiki](http://github.com/scribu/wp-posts-to-
 
 = 1.7.9 - 2026-03-TBD =
 * Fix conlficts with Divi 5 - FIXED
+* PHP 8.5 deprecation notice "Using null as an array offset" from the Connection Types page - FIXED
+* Function _load_textdomain_just_in_time was called incorrectly by the Connection Types page - FIXED
 
 = 1.7.8 - 2026-03-06 =
 * Re-release to resolve a deployment failure caused by GitHub service outage - FIXED

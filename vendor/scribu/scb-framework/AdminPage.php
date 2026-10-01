@@ -33,7 +33,9 @@ abstract class scbAdminPage {
 	protected $option_name;
 
 	// l10n
-	protected $textdomain;
+	// Defaults to an empty string rather than null: passing null to __() ends up
+	// being used as an array offset, which is deprecated as of PHP 8.5.
+	protected $textdomain = '';
 
 
 //  ____________REGISTRATION COMPONENT____________
