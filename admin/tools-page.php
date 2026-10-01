@@ -3,26 +3,17 @@
 class P2P_Tools_Page extends scbAdminPage {
 
 	function setup() {
+		// scbAdminPage translates a few strings of its own; without this the
+		// domain is null, which PHP 8.5 flags as a deprecated array offset.
+		$this->textdomain = P2P_TEXTDOMAIN;
+
 		$this->args = array(
-			'page_title' => 'Connection Types',
+			'page_title' => __( 'Connection Types', P2P_TEXTDOMAIN ),
 			'page_slug' => 'connection-types',
 			'parent' => 'tools.php'
 		);
 
-		add_action( 'admin_init', array( $this, 'init_args' ) );
-
 		add_action( 'admin_notices', array( $this, 'maybe_install' ) );
-	}
-
-	function init_args() {
-		$this->args = wp_parse_args(
-			array(
-				'page_title' => __( 'Connection Types', P2P_TEXTDOMAIN ),
-				'page_slug' => 'connection-types',
-				'parent' => 'tools.php'
-			),
-			$this->args
-		);
 	}
 
 	function maybe_install() {
